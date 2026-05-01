@@ -49,6 +49,30 @@
           "feedback": "INCORRECTO. 'root' no es el nombre estándar de la rama principal en Git."
         }
       ]
+    },
+    {
+      "_instruccion_pregunta": "TIPO 2: COMPLETAR ESPACIOS.",
+      "id": "q3",
+      "tipo": "completar",
+      "enunciado": "¿Qué comando falta para crear una nueva rama llamada 'feature-login'?",
+      "fragmento_codigo": "git [....] feature-login",
+      "puntos": 15,
+      "opciones": [
+        { "texto": "branch", "es_correcta": true, "feedback": "¡Correcto! 'git branch' crea la rama pero no te mueve a ella." },
+        { "texto": "checkout", "es_correcta": false, "feedback": "INCORRECTO. Checkout se usa para cambiar, no para crear (a menos que uses -b)." }
+      ]
+    },
+    {
+      "_instruccion_pregunta": "TIPO 2: COMPLETAR ESPACIOS.",
+      "id": "q4",
+      "tipo": "completar",
+      "enunciado": "Para cambiar tu contexto de trabajo a la rama 'develop', el comando es:",
+      "fragmento_codigo": "git [....] develop",
+      "puntos": 15,
+      "opciones": [
+        { "texto": "switch", "es_correcta": true, "feedback": "¡Exacto! 'git switch' es el comando moderno y seguro para cambiar de rama." },
+        { "texto": "remote", "es_correcta": false, "feedback": "INCORRECTO. 'remote' se usa para conexiones con servidores externos." }
+      ]
     }
   ]
 }
