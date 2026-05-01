@@ -1,0 +1,54 @@
+{
+  "_instruccion_general": "Nivel 6: Ciclo de vida y Estándares de Mensajes.",
+  "id": 6,
+  "modulo_id": "m2",
+  "titulo": "Ciclo de Vida y Mensajes",
+  "configuracion": {
+    "puntos_minimos_aprobar": 80,
+    "_instruccion_config": "Define cuántos puntos necesita el usuario para desbloquear el siguiente nivel."
+  },
+  "contenido_wiki": {
+    "_instruccion_wiki": "Escribe toda la teoría aquí usando formato Markdown. Usa \\n para los saltos de línea.",
+    "cuerpo_markdown": "# Módulo 2: Estados de Git\\n\\n## Los 3 Estados Principales\\n1. **Working Directory**: Donde modificas archivos.\\n2. **Staging Area**: Donde preparas los cambios (`git add`).\\n3. **Repository**: Donde guardas el historial (`git commit`).\\n\\n## Estándares de Mensajes\\nUsar prefijos como `feat:`, `fix:` o `docs:` ayuda al equipo a entender qué hiciste sin leer todo el código."
+  },
+  "preguntas": [
+    {
+      "_instruccion_pregunta": "TIPO 1: SELECCIÓN MÚLTIPLE.",
+      "id": "q1",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué comando mueve un archivo del Working Directory al Staging Area?",
+      "puntos": 10,
+      "opciones": [
+        {
+          "texto": "git add",
+          "es_correcta": true,
+          "feedback": "¡Correcto! El comando 'add' marca los archivos que quieres incluir en tu próximo commit."
+        },
+        {
+          "texto": "git commit",
+          "es_correcta": false,
+          "feedback": "INCORRECTO. El commit guarda los archivos que YA están en el Staging Area."
+        }
+      ]
+    },
+    {
+      "_instruccion_pregunta": "TIPO 1: SELECCIÓN MÚLTIPLE.",
+      "id": "q2",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué prefijo usarías en un mensaje de commit para una nueva funcionalidad?",
+      "puntos": 10,
+      "opciones": [
+        {
+          "texto": "feat:",
+          "es_correcta": true,
+          "feedback": "¡Exacto! 'feat' es la abreviatura de 'feature' (funcionalidad)."
+        },
+        {
+          "texto": "fix:",
+          "es_correcta": false,
+          "feedback": "INCORRECTO. 'fix' se utiliza exclusivamente para corrección de errores (bugs)."
+        }
+      ]
+    }
+  ]
+}
