@@ -13,3 +13,9 @@
 ## Descripcion del proyecto
 
 El proyecto busca apoyar y fortalecer el conocimiento en git elaborando una especie de software que facilite el acceso a conocimientos basicos de git e implementando un sistema de niveles progresivos que permite avanzar segun quiera ir avanzando el usuario, se implementan preguntas que permiten al usuario conocer el nivel de conocimiento por cada nivel dando al un feedback para fortalecer el conocimiento del mismo.
+
+## Instalar dependencias
+
+Antes de correrlo, asegúrate de estar en la terminal (dentro de tu entorno virtual si estás usando uno) e instala Flask y la librería de CORS:
+
+`pip install flask flask-cors`
