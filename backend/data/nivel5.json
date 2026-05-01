@@ -101,6 +101,28 @@
         "git branch -d feature-test"
       ],
       "feedback": "¡Excelente! Siempre debes volver a la rama receptora (main) antes de fusionar y borrar la rama temporal."
+    },
+    {
+      "_instruccion_pregunta": "TIPO 4: VERDADERO O FALSO.",
+      "id": "q7",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si borras una rama local con 'git branch -d', la rama también se borra automáticamente en GitHub.",
+      "puntos": 5,
+      "opciones": [
+        { "texto": "Verdadero", "es_correcta": false, "feedback": "INCORRECTO. Los cambios locales no afectan al servidor a menos que uses un comando de 'push'." },
+        { "texto": "Falso", "es_correcta": true, "feedback": "¡Correcto! Debes borrarla en el remoto explícitamente si deseas que desaparezca de GitHub." }
+      ]
+    },
+    {
+      "_instruccion_pregunta": "TIPO 4: VERDADERO O FALSO.",
+      "id": "q8",
+      "tipo": "verdadero_falso",
+      "enunciado": "Es posible tener dos ramas con el mismo nombre en un mismo repositorio local.",
+      "puntos": 5,
+      "opciones": [
+        { "texto": "Verdadero", "es_correcta": false, "feedback": "INCORRECTO. Git requiere que cada rama tenga un nombre único para poder identificarlas." },
+        { "texto": "Falso", "es_correcta": true, "feedback": "¡Exacto! Los nombres de las ramas actúan como identificadores únicos." }
+      ]
     }
   ]
 }
