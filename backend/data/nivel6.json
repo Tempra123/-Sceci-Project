@@ -1,33 +1,31 @@
 {
-  "_instruccion_general": "Nivel 6: Ciclo de vida y Estándares de Mensajes.",
+  "_instruccion_general": "Nivel 6: Fusión de Ramas (Merging).",
   "id": 6,
   "modulo_id": "m2",
-  "titulo": "Ciclo de Vida y Mensajes",
+  "titulo": "Fusión (Merging)",
   "configuracion": {
-    "puntos_minimos_aprobar": 80,
-    "_instruccion_config": "Define cuántos puntos necesita el usuario para desbloquear el siguiente nivel."
+    "puntos_minimos_aprobar": 80
   },
   "contenido_wiki": {
-    "_instruccion_wiki": "Escribe toda la teoría aquí usando formato Markdown. Usa \\n para los saltos de línea.",
-    "cuerpo_markdown": "# Módulo 2: Estados de Git\\n\\n## Los 3 Estados Principales\\n1. **Working Directory**: Donde modificas archivos.\\n2. **Staging Area**: Donde preparas los cambios (`git add`).\\n3. **Repository**: Donde guardas el historial (`git commit`).\\n\\n## Estándares de Mensajes\\nUsar prefijos como `feat:`, `fix:` o `docs:` ayuda al equipo a entender qué hiciste sin leer todo el código."
+    "cuerpo_markdown": "# Módulo 2: Uniendo el trabajo (Merge)\\n\\n## ¿Qué es el Merging?\\nEs el proceso de integrar los cambios de una rama (como una de nivel o funcionalidad) en otra rama principal (como main o develop).\\n\\n## ¿Cuándo se hace?\\nSe realiza cuando has terminado una tarea en tu rama propia y quieres que esos cambios formen parte del proyecto general para que tus compañeros los vean."
   },
   "preguntas": [
     {
       "_instruccion_pregunta": "TIPO 1: SELECCIÓN MÚLTIPLE.",
       "id": "q1",
       "tipo": "opcion_multiple",
-      "enunciado": "¿Qué comando mueve un archivo del Working Directory al Staging Area?",
+      "enunciado": "¿Qué hace el comando 'git merge'?",
       "puntos": 10,
       "opciones": [
         {
-          "texto": "git add",
+          "texto": "Combina el historial y los cambios de una rama dentro de otra.",
           "es_correcta": true,
-          "feedback": "¡Correcto! El comando 'add' marca los archivos que quieres incluir en tu próximo commit."
+          "feedback": "¡Correcto! Es la forma de unir el trabajo de diferentes personas."
         },
         {
-          "texto": "git commit",
+          "texto": "Borra una rama permanentemente del repositorio.",
           "es_correcta": false,
-          "feedback": "INCORRECTO. El commit guarda los archivos que YA están en el Staging Area."
+          "feedback": "INCORRECTO. Para borrar se usa 'branch -d', el merge es para unir."
         }
       ]
     },
@@ -35,73 +33,20 @@
       "_instruccion_pregunta": "TIPO 1: SELECCIÓN MÚLTIPLE.",
       "id": "q2",
       "tipo": "opcion_multiple",
-      "enunciado": "¿Qué prefijo usarías en un mensaje de commit para una nueva funcionalidad?",
+      "enunciado": "¿Qué sucede si dos personas modifican la misma línea del mismo archivo antes de un merge?",
       "puntos": 10,
       "opciones": [
         {
-          "texto": "feat:",
+          "texto": "Se produce un Conflicto de Fusión (Merge Conflict).",
           "es_correcta": true,
-          "feedback": "¡Exacto! 'feat' es la abreviatura de 'feature' (funcionalidad)."
+          "feedback": "¡Exacto! Git se detiene y pide al programador que elija qué cambio conservar."
         },
         {
-          "texto": "fix:",
+          "texto": "Git borra automáticamente ambos cambios por seguridad.",
           "es_correcta": false,
-          "feedback": "INCORRECTO. 'fix' se utiliza exclusivamente para corrección de errores (bugs)."
+          "feedback": "INCORRECTO. Git nunca borra tu código sin avisar, te pide ayuda para resolverlo."
         }
       ]
-    },
-    {
-      "_instruccion_pregunta": "TIPO 2: COMPLETAR ESPACIOS.",
-      "id": "q3",
-      "tipo": "completar",
-      "enunciado": "Para verificar en qué estado se encuentran tus archivos (si están modificados o preparados), el comando es:",
-      "fragmento_codigo": "git [....]",
-      "puntos": 10,
-      "opciones": [
-        { "texto": "status", "es_correcta": true, "feedback": "¡Correcto! 'git status' es fundamental para no hacer commits por accidente." },
-        { "texto": "log", "es_correcta": false, "feedback": "INCORRECTO. 'log' muestra el historial de commits, no el estado actual." }
-      ]
-    },
-    {
-      "_instruccion_pregunta": "TIPO 2: COMPLETAR ESPACIOS.",
-      "id": "q4",
-      "tipo": "completar",
-      "enunciado": "Para descargar los últimos cambios de tus compañeros desde GitHub a tu computadora, usas:",
-      "fragmento_codigo": "git [....]",
-      "puntos": 15,
-      "opciones": [
-        { "texto": "pull", "es_correcta": true, "feedback": "¡Exacto! 'git pull' trae los cambios remotos y los fusiona con tu trabajo local." },
-        { "texto": "push", "es_correcta": false, "feedback": "INCORRECTO. 'push' sirve para subir tus cambios, no para descargarlos." }
-      ]
-    },
-    {
-      "_instruccion_pregunta": "TIPO 3: ORDENAR PASOS.",
-      "id": "q5",
-      "tipo": "ordenar",
-      "enunciado": "Ordena los estados por los que pasa un archivo en Git desde su creación:",
-      "puntos": 20,
-      "pasos_correctos": [
-        "Untracked (Archivo nuevo)",
-        "Staging Area (Preparado)",
-        "Unpushed (Guardado local)",
-        "Remote (Subido a GitHub)"
-      ],
-      "feedback": "¡Perfecto! Este es el ciclo de vida estándar de cualquier cambio en el código."
-    },
-    {
-      "_instruccion_pregunta": "TIPO 3: ORDENAR PASOS.",
-      "id": "q6",
-      "tipo": "ordenar",
-      "enunciado": "Ordena el flujo de trabajo para colaborar de forma segura con tu equipo:",
-      "puntos": 20,
-      "pasos_correctos": [
-        "git pull (Descargar cambios)",
-        "Hacer cambios en el código",
-        "git add (Preparar)",
-        "git commit (Guardar)",
-        "git push (Subir)"
-      ],
-      "feedback": "¡Excelente! Siempre es mejor bajar cambios (pull) antes de subir los tuyos para evitar conflictos."
     }
   ]
 }
