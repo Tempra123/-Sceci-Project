@@ -73,6 +73,35 @@
         { "texto": "pull", "es_correcta": true, "feedback": "¡Exacto! 'git pull' trae los cambios remotos y los fusiona con tu trabajo local." },
         { "texto": "push", "es_correcta": false, "feedback": "INCORRECTO. 'push' sirve para subir tus cambios, no para descargarlos." }
       ]
+    },
+    {
+      "_instruccion_pregunta": "TIPO 3: ORDENAR PASOS.",
+      "id": "q5",
+      "tipo": "ordenar",
+      "enunciado": "Ordena los estados por los que pasa un archivo en Git desde su creación:",
+      "puntos": 20,
+      "pasos_correctos": [
+        "Untracked (Archivo nuevo)",
+        "Staging Area (Preparado)",
+        "Unpushed (Guardado local)",
+        "Remote (Subido a GitHub)"
+      ],
+      "feedback": "¡Perfecto! Este es el ciclo de vida estándar de cualquier cambio en el código."
+    },
+    {
+      "_instruccion_pregunta": "TIPO 3: ORDENAR PASOS.",
+      "id": "q6",
+      "tipo": "ordenar",
+      "enunciado": "Ordena el flujo de trabajo para colaborar de forma segura con tu equipo:",
+      "puntos": 20,
+      "pasos_correctos": [
+        "git pull (Descargar cambios)",
+        "Hacer cambios en el código",
+        "git add (Preparar)",
+        "git commit (Guardar)",
+        "git push (Subir)"
+      ],
+      "feedback": "¡Excelente! Siempre es mejor bajar cambios (pull) antes de subir los tuyos para evitar conflictos."
     }
   ]
 }
