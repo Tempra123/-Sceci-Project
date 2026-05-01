@@ -73,6 +73,34 @@
         { "texto": "switch", "es_correcta": true, "feedback": "¡Exacto! 'git switch' es el comando moderno y seguro para cambiar de rama." },
         { "texto": "remote", "es_correcta": false, "feedback": "INCORRECTO. 'remote' se usa para conexiones con servidores externos." }
       ]
+    },
+    {
+      "_instruccion_pregunta": "TIPO 3: ORDENAR PASOS.",
+      "id": "q5",
+      "tipo": "ordenar",
+      "enunciado": "Ordena los comandos necesarios para crear una rama y empezar a trabajar en ella:",
+      "puntos": 20,
+      "pasos_correctos": [
+        "git branch feature-test",
+        "git switch feature-test",
+        "touch archivo.txt",
+        "git add archivo.txt",
+        "git commit -m 'primer commit'"
+      ],
+      "feedback": "¡Perfecto! Primero creas la rama, luego te mueves a ella y finalmente realizas el ciclo de vida del commit."
+    },
+    {
+      "_instruccion_pregunta": "TIPO 3: ORDENAR PASOS.",
+      "id": "q6",
+      "tipo": "ordenar",
+      "enunciado": "Ordena el flujo para integrar cambios de una rama a otra localmente:",
+      "puntos": 20,
+      "pasos_correctos": [
+        "git switch main",
+        "git merge feature-test",
+        "git branch -d feature-test"
+      ],
+      "feedback": "¡Excelente! Siempre debes volver a la rama receptora (main) antes de fusionar y borrar la rama temporal."
     }
   ]
 }
