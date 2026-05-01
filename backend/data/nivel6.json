@@ -49,6 +49,30 @@
           "feedback": "INCORRECTO. 'fix' se utiliza exclusivamente para corrección de errores (bugs)."
         }
       ]
+    },
+    {
+      "_instruccion_pregunta": "TIPO 2: COMPLETAR ESPACIOS.",
+      "id": "q3",
+      "tipo": "completar",
+      "enunciado": "Para verificar en qué estado se encuentran tus archivos (si están modificados o preparados), el comando es:",
+      "fragmento_codigo": "git [....]",
+      "puntos": 10,
+      "opciones": [
+        { "texto": "status", "es_correcta": true, "feedback": "¡Correcto! 'git status' es fundamental para no hacer commits por accidente." },
+        { "texto": "log", "es_correcta": false, "feedback": "INCORRECTO. 'log' muestra el historial de commits, no el estado actual." }
+      ]
+    },
+    {
+      "_instruccion_pregunta": "TIPO 2: COMPLETAR ESPACIOS.",
+      "id": "q4",
+      "tipo": "completar",
+      "enunciado": "Para descargar los últimos cambios de tus compañeros desde GitHub a tu computadora, usas:",
+      "fragmento_codigo": "git [....]",
+      "puntos": 15,
+      "opciones": [
+        { "texto": "pull", "es_correcta": true, "feedback": "¡Exacto! 'git pull' trae los cambios remotos y los fusiona con tu trabajo local." },
+        { "texto": "push", "es_correcta": false, "feedback": "INCORRECTO. 'push' sirve para subir tus cambios, no para descargarlos." }
+      ]
     }
   ]
 }
