@@ -123,6 +123,30 @@
         { "texto": "Verdadero", "es_correcta": false, "feedback": "INCORRECTO. Git requiere que cada rama tenga un nombre único para poder identificarlas." },
         { "texto": "Falso", "es_correcta": true, "feedback": "¡Exacto! Los nombres de las ramas actúan como identificadores únicos." }
       ]
+    },
+    {
+      "_instruccion_pregunta": "TIPO 5: DETECCIÓN DE ERRORES.",
+      "id": "q9",
+      "tipo": "deteccion_error",
+      "enunciado": "Un estudiante intenta borrar la rama donde está parado actualmente y recibe un error. ¿Por qué sucede esto?",
+      "comando_ejecutado": "git branch -d feature-actual",
+      "puntos": 10,
+      "opciones": [
+        { "texto": "No puedes eliminar la rama activa (HEAD). Debes cambiar a otra rama primero.", "es_correcta": true, "feedback": "¡Correcto! Es como intentar quitar el piso donde estás parado." },
+        { "texto": "El comando correcto es 'git delete'.", "es_correcta": false, "feedback": "INCORRECTO. El comando es correcto, el problema es la posición del usuario." }
+      ]
+    },
+    {
+      "_instruccion_pregunta": "TIPO 5: DETECCIÓN DE ERRORES.",
+      "id": "q10",
+      "tipo": "deteccion_error",
+      "enunciado": "¿Qué error hay en este comando para crear y cambiar de rama simultáneamente?",
+      "comando_ejecutado": "git switch feature-new",
+      "puntos": 10,
+      "opciones": [
+        { "texto": "Falta la bandera '-c' (o -b en checkout) para indicar que la rama es nueva.", "es_correcta": true, "feedback": "¡Exacto! Sin -c, Git busca una rama que ya exista." },
+        { "texto": "El nombre de la rama no puede llevar guiones.", "es_correcta": false, "feedback": "INCORRECTO. Los guiones son caracteres válidos y recomendados en nombres de ramas." }
+      ]
     }
   ]
 }
