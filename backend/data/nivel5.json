@@ -1,0 +1,54 @@
+{
+  "_instruccion_general": "Copia este archivo para crear nuevos niveles. No borres las claves con '_', son para guiar al equipo.",
+  "id": 5,
+  "modulo_id": "m2",
+  "titulo": "Ramas (Branching)",
+  "configuracion": {
+    "puntos_minimos_aprobar": 75,
+    "_instruccion_config": "Define cuántos puntos necesita el usuario para desbloquear el siguiente nivel."
+  },
+  "contenido_wiki": {
+    "_instruccion_wiki": "Escribe toda la teoría aquí usando formato Markdown. Usa \\n para los saltos de línea.",
+    "cuerpo_markdown": "# Módulo 2: El poder de Git\\n\\n## ¿Qué es una rama?\\nEn Git, una rama es un puntero móvil que apunta a un commit específico. Por defecto, Git usa la rama `main`.\\n\\n## Comandos Esenciales\\n- `git branch`: Lista las ramas.\\n- `git branch <nombre>`: Crea una rama.\\n- `git switch <nombre>`: Cambia de contexto a la rama seleccionada."
+  },
+  "preguntas": [
+    {
+      "_instruccion_pregunta": "TIPO 1: SELECCIÓN MÚLTIPLE.",
+      "id": "q1",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué es una rama en Git?",
+      "puntos": 10,
+      "opciones": [
+        {
+          "texto": "Un puntero ligero y móvil hacia un commit específico.",
+          "es_correcta": true,
+          "feedback": "¡Exacto! Las ramas son referencias que apuntan al último trabajo realizado en una línea de tiempo."
+        },
+        {
+          "texto": "Una copia completa de todos los archivos en una carpeta oculta.",
+          "es_correcta": false,
+          "feedback": "INCORRECTO. Git no duplica archivos físicamente al crear ramas; usa punteros para ser eficiente."
+        }
+      ]
+    },
+    {
+      "_instruccion_pregunta": "TIPO 1: SELECCIÓN MÚLTIPLE.",
+      "id": "q2",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cuál es la rama principal que Git crea por defecto?",
+      "puntos": 10,
+      "opciones": [
+        {
+          "texto": "main (o master)",
+          "es_correcta": true,
+          "feedback": "¡Correcto! Tradicionalmente era 'master', pero actualmente la mayoría de plataformas usan 'main'."
+        },
+        {
+          "texto": "root",
+          "es_correcta": false,
+          "feedback": "INCORRECTO. 'root' no es el nombre estándar de la rama principal en Git."
+        }
+      ]
+    }
+  ]
+}
