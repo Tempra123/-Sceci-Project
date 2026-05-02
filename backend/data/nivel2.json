@@ -7,4 +7,9 @@
   
   "configuracion": {
     "puntos_minimos_aprobar": 70
+  },
+
+  "contenido_wiki": {
+    "_instruccion_wiki": "Usa formato Markdown. Usa \\n para los saltos de línea y escapa las comillas dobles si es necesario.",
+    "cuerpo_markdown": "# El Ciclo de Vida de Git\n\nEntender Git es entender sus **tres áreas principales**. Cada archivo en tu proyecto viaja por estas áreas:\n\n## 1. Working Directory (Directorio de Trabajo)\nEs la carpeta en tu computadora donde estás editando los archivos actualmente. Aquí es donde programas y haces cambios.\n\n## 2. Staging Area (Área de Preparación)\nEs una zona intermedia. Cuando terminas de editar un archivo y quieres que Git lo guarde en la próxima captura, lo envías aquí usando el comando `git add`.\n\n## 3. Repository / History (El Repositorio)\nEs la base de datos de Git donde se guardan las instantáneas permanentes (commits). Envías los archivos desde el Staging Area hacia aquí usando `git commit`.\n\n## Comandos Clave\n- `git status`: Te muestra en qué área están tus archivos actualmente.\n- `git add <archivo>`: Mueve un archivo específico al Staging Area.\n- `git add .`: Mueve **todos** los archivos modificados al Staging Area.\n- `git commit -m \"mensaje\"`: Guarda permanentemente los archivos del Staging Area en el repositorio."
   }
