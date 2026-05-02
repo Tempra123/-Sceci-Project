@@ -12,4 +12,86 @@
   "contenido_wiki": {
     "_instruccion_wiki": "Usa formato Markdown. Usa \\n para los saltos de línea y escapa las comillas dobles si es necesario.",
     "cuerpo_markdown": "# El Ciclo de Vida de Git\n\nEntender Git es entender sus **tres áreas principales**. Cada archivo en tu proyecto viaja por estas áreas:\n\n## 1. Working Directory (Directorio de Trabajo)\nEs la carpeta en tu computadora donde estás editando los archivos actualmente. Aquí es donde programas y haces cambios.\n\n## 2. Staging Area (Área de Preparación)\nEs una zona intermedia. Cuando terminas de editar un archivo y quieres que Git lo guarde en la próxima captura, lo envías aquí usando el comando `git add`.\n\n## 3. Repository / History (El Repositorio)\nEs la base de datos de Git donde se guardan las instantáneas permanentes (commits). Envías los archivos desde el Staging Area hacia aquí usando `git commit`.\n\n## Comandos Clave\n- `git status`: Te muestra en qué área están tus archivos actualmente.\n- `git add <archivo>`: Mueve un archivo específico al Staging Area.\n- `git add .`: Mueve **todos** los archivos modificados al Staging Area.\n- `git commit -m \"mensaje\"`: Guarda permanentemente los archivos del Staging Area en el repositorio."
-  }
+  },
+
+  "preguntas": [
+    {
+      "id": "q1",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué es el 'Staging Area' (Área de preparación)?",
+      "puntos": 10,
+      "opciones": [
+        {
+          "texto": "Una zona intermedia donde seleccionas qué archivos irán en el próximo commit.",
+          "es_correcta": true,
+          "feedback": "¡Correcto! Es como una sala de espera antes de tomar la fotografía final de tus cambios."
+        },
+        {
+          "texto": "El servidor en la nube de GitHub donde se guardan los archivos.",
+          "es_correcta": false,
+          "feedback": "INCORRECTO. El servidor en la nube es un 'Remoto'. El Staging Area es local, en tu máquina."
+        },
+        {
+          "texto": "La carpeta donde editas tu código fuente.",
+          "es_correcta": false,
+          "feedback": "INCORRECTO. Esa carpeta se conoce como el Working Directory (Directorio de trabajo)."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "tipo": "completar",
+      "enunciado": "Completa el comando para agregar únicamente un archivo específico llamado `index.html` al Staging Area.",
+      "fragmento_codigo": "git add [....]",
+      "puntos": 10,
+      "opciones": [
+        { "texto": "index.html", "es_correcta": true, "feedback": "¡Exacto! Debes especificar el nombre exacto del archivo." },
+        { "texto": ".", "es_correcta": false, "feedback": "INCORRECTO. El punto `.` agregaría TODOS los archivos modificados, no solo uno específico." },
+        { "texto": "-A", "es_correcta": false, "feedback": "INCORRECTO. La bandera `-A` (All) agrega todos los archivos modificados y eliminados." }
+      ]
+    },
+    {
+      "id": "q3",
+      "tipo": "verdadero_falso",
+      "enunciado": "El 'Working Directory' es el área donde Git guarda el historial permanente de todas las versiones de tu proyecto.",
+      "puntos": 10,
+      "opciones": [
+        {
+          "texto": "Verdadero",
+          "es_correcta": false,
+          "feedback": "INCORRECTO. El Working Directory es donde tú editas los archivos. El historial permanente se guarda en el 'Repository'."
+        },
+        {
+          "texto": "Falso",
+          "es_correcta": true,
+          "feedback": "¡Correcto! El historial permanente vive en el Repositorio (.git), no en el Directorio de Trabajo."
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "tipo": "ordenar",
+      "enunciado": "Ordena el ciclo de vida natural de un archivo en Git, desde que lo modificas hasta que lo guardas permanentemente:",
+      "puntos": 15,
+      "orden_correcto": [
+        "1. Working Directory (Editar archivo)",
+        "2. Staging Area (Preparar archivo)",
+        "3. Repository (Confirmar archivo)"
+      ],
+      "feedback_correcto": "¡Perfecto! Ese es el viaje exacto: lo modificas, lo preparas y lo confirmas.",
+      "feedback_incorrecto": "INCORRECTO. El orden lógico es: editar (Working), preparar con git add (Staging) y guardar con git commit (Repository)."
+    },
+    {
+      "id": "q5",
+      "tipo": "encuentra_error",
+      "enunciado": "Encuentra el error de sintaxis en el siguiente comando utilizado para confirmar los cambios:",
+      "fragmento_codigo": "git commit m \"Corregir bug visual\"",
+      "puntos": 10,
+      "opciones": [
+        { "texto": "git", "es_correcta": false, "feedback": "INCORRECTO. 'git' es el inicio correcto." },
+        { "texto": "commit", "es_correcta": false, "feedback": "INCORRECTO. 'commit' es la acción correcta." },
+        { "texto": "m", "es_correcta": true, "feedback": "¡Correcto! Falta el guion. Debería ser la bandera `-m` para el mensaje." },
+        { "texto": "\"Corregir bug visual\"", "es_correcta": false, "feedback": "INCORRECTO. El mensaje entre comillas es totalmente válido." }
+      ]
+    }
+}
